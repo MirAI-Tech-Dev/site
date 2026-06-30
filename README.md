@@ -1,5 +1,4 @@
 # Mirai Tech Solutions
 
-[miraitech.solutions](https://miraitech.solutions)
+[miraitech.dev](https://miraitech.dev)
 
-[www.miraitech.solutions](https://www.miraitech.solutions)
