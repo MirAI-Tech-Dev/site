@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en_US">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e95420">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
 
     
     <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -17,11 +20,13 @@
 <link rel="canonical" href="https://miraitech.dev/" />
 <meta property="og:url" content="https://miraitech.dev/" />
 <meta property="og:site_name" content="MirAI Tech「ミライテック」" />
+<meta property="og:image" content="https://miraitech.dev/img/header-bg.webp" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://miraitech.dev/img/header-bg.webp" />
 <meta property="twitter:title" content="MirAI Tech「ミライテック」" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","dateModified":"2014-08-20T23:53:40+00:00","description":"MirAI Tech is dedicated to providing innovative and cutting-edge technology specializing in AI solutions to clients.","headline":"MirAI Tech「ミライテック」","name":"MirAI Tech「ミライテック」","url":"https://miraitech.dev/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2026-07-25T13:48:16+09:00","description":"MirAI Tech is dedicated to providing innovative and cutting-edge technology specializing in AI solutions to clients.","headline":"MirAI Tech「ミライテック」","image":"https://miraitech.dev/img/header-bg.webp","name":"MirAI Tech「ミライテック」","url":"https://miraitech.dev/"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -43,14 +48,12 @@
     <link rel="stylesheet" href="/style.css">
 
     <!-- Custom Fonts -->
-    <!-- <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap' rel='stylesheet' type='text/css'>
-    
     <!-- google analytics -->
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PNE3RKGM7"></script>
@@ -71,8 +74,6 @@
 </script>
 
 
-
-    
 </head>
 
 
@@ -192,7 +193,6 @@
     </section>
 
     
-    
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
@@ -298,10 +298,6 @@
         </div>
     </section>
 
-    
-
-
-    
 
     <section id="contact">
         <div class="container">
@@ -316,6 +312,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" novalidate>
+                        <!-- Formspree honeypot anti-spam field -->
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="control-group form-group">
@@ -349,6 +347,10 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Form JavaScript (only loaded where the form is) -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
 
       <footer>
         <div class="container">
@@ -388,8 +390,6 @@
     </footer>
 
 
-    
-
      <!-- jQuery Version 1.11.0 -->
     <!-- <script src="/js/jquery-1.11.0.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -413,13 +413,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="/js/jqBootstrapValidation.js"></script>
-    <script src="/js/contact_me.js"></script>
 
-
-    
-    <style>
+    <!-- Cookie consent banner + Google consent mode (analytics vs ads split) -->
+<style>
     #cookie-notice {
         padding: 0.5rem 1rem;
         display: none;
@@ -452,58 +448,90 @@
 </style>
 <div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this
         website.</span>
-    <a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
+    <a id="cookie-notice-accept" class="btn btn-primary btn-sm">Accept all</a>
+    <a id="cookie-notice-analytics" class="btn btn-primary btn-sm">Analytics only</a>
     <a id="cookie-notice-deny" class="btn btn-primary btn-sm">Deny</a>
     <a href="/privacy-policy.html" class="btn btn-primary btn-sm" aria-label="Privacy Policy">More info</a>
 </div>
 <script>
-    function createCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name, "", -1);
-    }
+    (function () {
+        var ANALYTICS_ID = 'G-7PNE3RKGM7';
+        var ADSENSE_CLIENT = 'ca-pub-1683163477992363';
 
-    if (readCookie('cookie-notice-option') == 'true') {
-        // 
-        gtag('consent', 'update', {
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted'
+        function createCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Load Google Adsense only after the visitor has granted ad consent.
+        function loadAdsense() {
+            if (document.getElementById('adsbygoogle-script')) return;
+            var s = document.createElement('script');
+            s.id = 'adsbygoogle-script';
+            s.async = true;
+            s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CLIENT;
+            s.crossOrigin = 'anonymous';
+            document.head.appendChild(s);
+        }
+
+        // Apply the chosen consent state to gtag. Ads stay denied unless explicitly granted.
+        function applyConsent(choice) {
+            var adsGranted = (choice === 'all');
+            var analyticsGranted = (choice === 'all' || choice === 'analytics');
+            if (typeof gtag === 'function') {
+                gtag('consent', 'update', {
+                    'ad_user_data': adsGranted ? 'granted' : 'denied',
+                    'ad_personalization': adsGranted ? 'granted' : 'denied',
+                    'ad_storage': adsGranted ? 'granted' : 'denied',
+                    'analytics_storage': analyticsGranted ? 'granted' : 'denied'
+                });
+            }
+            if (adsGranted) {
+                loadAdsense();
+            }
+        }
+
+        var choice = readCookie('cookie-notice-option');
+        if (choice === 'all' || choice === 'analytics' || choice === 'denied') {
+            applyConsent(choice);
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+
+        document.getElementById('cookie-notice-accept').addEventListener('click', function () {
+            createCookie('cookie-notice-option', 'all', 31);
+            applyConsent('all');
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
         });
-    } else if (readCookie('cookie-notice-option') != 'false') {
-        document.getElementById('cookie-notice').style.display = 'block';
-    }
-
-    document.getElementById('cookie-notice-accept').addEventListener("click", function () {
-        createCookie('cookie-notice-option', 'true', 31);
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
-    });
-
-    document.getElementById('cookie-notice-deny').addEventListener("click", function () {
-        createCookie('cookie-notice-option', 'false', 31);
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
-    });
-
+        document.getElementById('cookie-notice-analytics').addEventListener('click', function () {
+            createCookie('cookie-notice-option', 'analytics', 31);
+            applyConsent('analytics');
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
+        document.getElementById('cookie-notice-deny').addEventListener('click', function () {
+            createCookie('cookie-notice-option', 'denied', 31);
+            applyConsent('denied');
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
+    })();
 </script>
 </body>
 
